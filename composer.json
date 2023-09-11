@@ -12,5 +12,8 @@
             "email": "daniel@winningwebdesign.co.uk"
         }
     ],
-    "require": {}
+    "require": {
+        "dannyxcii/routing-component": "^1.2",
+        "dannyxcii/dependency-injection-component": "^1.1"
+    }
 }
