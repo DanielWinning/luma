@@ -1,0 +1,16 @@
+{
+    "name": "microframe/framework",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Microframe\\Framework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel Winning",
+            "email": "daniel@winningwebdesign.co.uk"
+        }
+    ],
+    "require": {}
+}
