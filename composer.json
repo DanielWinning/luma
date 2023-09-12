@@ -7,13 +7,16 @@
             "email": "daniel@winningwebdesign.co.uk"
         }
     ],
+    "autoload": {
+        "App\\": "src/"
+    },
+    "minimum-stability": "dev",
     "require": {
-        "lumax/framework-component": "^0.1.1"
+        "lumax/framework-component": "dev-main"
     },
     "scripts": {
         "post-install-cmd": [
-            "php `pwd`/$argv[1]/installer/install.php",
-            "rm -r /installer"
+            "Luma\\Framework\\Install\\Installer::install"
         ]
     },
     "version": "0.1.0",
