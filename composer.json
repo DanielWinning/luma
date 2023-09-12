@@ -8,11 +8,11 @@
         }
     ],
     "require": {
-        "lumax/framework-component": "^0.1.0"
+        "lumax/framework-component": "^0.1.1"
     },
     "scripts": {
         "post-install-cmd": [
-            "php /installer/install.php",
+            "php `pwd`/$argv[1]/installer/install.php",
             "rm -r /installer"
         ]
     },
