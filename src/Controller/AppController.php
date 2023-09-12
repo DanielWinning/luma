@@ -14,12 +14,4 @@ class AppController extends LumaController
     {
         return $this->render('index', []);
     }
-
-    /**
-     * @return Response
-     */
-    public function testApi(): Response
-    {
-        return $this->json(['hello' => 'world']);
-    }
 }

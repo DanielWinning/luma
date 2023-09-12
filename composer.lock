@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "487a9784e7dc0422792712a771b00e6c",
+    "content-hash": "92fc11fac31115805f8ecc9f3e3d4611",
     "packages": [
         {
             "name": "dannyxcii/dependency-injection-component",
