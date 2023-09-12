@@ -1,0 +1,4 @@
+routes:
+  index:
+    path: '/'
+    handler: ['App\Controller\AppController', 'index']

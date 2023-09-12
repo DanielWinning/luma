@@ -1,14 +1,11 @@
 <?php
 
-use DannyXCII\DependencyInjectionComponent\DependencyContainer;
-use DannyXCII\DependencyInjectionComponent\DependencyManager;
+use Luma\Framework\Luma;
+use Tracy\Debugger;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once sprintf('%s/vendor/autoload.php', dirname(__DIR__));
 
-try {
-    $container = new DependencyContainer();
-    $dependencyManager = new DependencyManager($container);
-    $dependencyManager->loadDependenciesFromFile(dirname(__DIR__) . '/config/services.yaml');
-} catch (\Exception $exception) {
-    die($exception->getMessage());
-}
+Debugger::enable(Debugger::Development);
+Debugger::$logDirectory = sprintf('%s/log', dirname(__DIR__));
+
+$app = new Luma();

@@ -1,11 +1,6 @@
 {
-    "name": "microframe/framework",
+    "name": "lumax/luma",
     "type": "library",
-    "autoload": {
-        "psr-4": {
-            "Microframe\\Framework\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Daniel Winning",
@@ -13,7 +8,14 @@
         }
     ],
     "require": {
-        "dannyxcii/routing-component": "^1.2",
-        "dannyxcii/dependency-injection-component": "^1.1"
-    }
+        "lumax/framework-component": "^0.1.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php /installer/install.php",
+            "rm -r /installer"
+        ]
+    },
+    "version": "0.1.0",
+    "license": "GPL-3.0-or-later"
 }
