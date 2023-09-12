@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a291b013081bb4ec28fa363bcec4d197",
+    "content-hash": "487a9784e7dc0422792712a771b00e6c",
     "packages": [
         {
             "name": "dannyxcii/dependency-injection-component",
@@ -232,16 +232,16 @@
         },
         {
             "name": "lumax/framework-component",
-            "version": "dev-main",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DanielWinning/framework-component.git",
-                "reference": "d3d9b2872d384b15991aad9e50db15310c64f4c2"
+                "reference": "9759e9a7b72a311b488c9ccdd7dd08cb89fe74f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/d3d9b2872d384b15991aad9e50db15310c64f4c2",
-                "reference": "d3d9b2872d384b15991aad9e50db15310c64f4c2",
+                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/9759e9a7b72a311b488c9ccdd7dd08cb89fe74f1",
+                "reference": "9759e9a7b72a311b488c9ccdd7dd08cb89fe74f1",
                 "shasum": ""
             },
             "require": {
@@ -250,7 +250,6 @@
                 "latte/latte": "^3.0",
                 "tracy/tracy": "^2.10"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -269,9 +268,9 @@
             ],
             "support": {
                 "issues": "https://github.com/DanielWinning/framework-component/issues",
-                "source": "https://github.com/DanielWinning/framework-component/tree/main"
+                "source": "https://github.com/DanielWinning/framework-component/tree/0.1.1"
             },
-            "time": "2023-09-12T18:36:11+00:00"
+            "time": "2023-09-12T19:01:55+00:00"
         },
         {
             "name": "psr/container",
@@ -736,9 +735,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "lumax/framework-component": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
