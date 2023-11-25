@@ -1,12 +1,7 @@
 {
     "name": "vendor/luma-project",
+    "description": "A Luma Project.",
     "type": "library",
-    "authors": [
-        {
-            "name": "Your Name",
-            "email": "yourname@email.com"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "App\\": "src/"
