@@ -4,146 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fcc95e0cd252b3a527d7ff9b0b416ff",
+    "content-hash": "4a6716894a7210c334dfde26208f9080",
     "packages": [
-        {
-            "name": "dannyxcii/dependency-injection-component",
-            "version": "1.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DanielWinning/dependency-injection-component.git",
-                "reference": "557ce10f41db64c199e9ca3607bed6de97b0177a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/dependency-injection-component/zipball/557ce10f41db64c199e9ca3607bed6de97b0177a",
-                "reference": "557ce10f41db64c199e9ca3607bed6de97b0177a",
-                "shasum": ""
-            },
-            "require": {
-                "psr/container": "^2.0",
-                "symfony/yaml": "^6.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DannyXCII\\DependencyInjectionComponent\\": "src/",
-                    "DannyXCII\\DependencyInjectionComponentTests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Winning",
-                    "email": "daniel@winningsoftware.co.uk"
-                }
-            ],
-            "description": "A Dependency Injection Package",
-            "support": {
-                "issues": "https://github.com/DanielWinning/dependency-injection-component/issues",
-                "source": "https://github.com/DanielWinning/dependency-injection-component/tree/1.1.5"
-            },
-            "time": "2023-09-07T22:01:26+00:00"
-        },
-        {
-            "name": "dannyxcii/http-component",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DanielWinning/http-component.git",
-                "reference": "72151ce6ab11f3d583af376dbd1d9d4ffe0a6f0c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/http-component/zipball/72151ce6ab11f3d583af376dbd1d9d4ffe0a6f0c",
-                "reference": "72151ce6ab11f3d583af376dbd1d9d4ffe0a6f0c",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "psr/http-client": "^1.0",
-                "psr/http-message": "^2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DannyXCII\\HttpComponent\\": "src/",
-                    "DannyXCII\\HttpComponentTests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Winning",
-                    "email": "daniel@winningsoftware.co.uk"
-                }
-            ],
-            "description": "A component for handling HTTP Requests/Responses",
-            "support": {
-                "issues": "https://github.com/DanielWinning/http-component/issues",
-                "source": "https://github.com/DanielWinning/http-component/tree/2.0.1"
-            },
-            "time": "2023-09-09T10:00:19+00:00"
-        },
-        {
-            "name": "dannyxcii/routing-component",
-            "version": "1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DanielWinning/routing-component.git",
-                "reference": "8fca61020b2ece334c25960a64370bde208c7a96"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/routing-component/zipball/8fca61020b2ece334c25960a64370bde208c7a96",
-                "reference": "8fca61020b2ece334c25960a64370bde208c7a96",
-                "shasum": ""
-            },
-            "require": {
-                "dannyxcii/http-component": "^2.0",
-                "psr/container": "^2.0",
-                "psr/http-message": "^2.0",
-                "symfony/yaml": "^6.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DannyXCII\\RoutingComponent\\": "src/",
-                    "DannyXCII\\RoutingComponentTests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Winning",
-                    "email": "daniel@winningwebdesign.co.uk"
-                }
-            ],
-            "description": "A dynamic PHP Routing Component",
-            "support": {
-                "issues": "https://github.com/DanielWinning/routing-component/issues",
-                "source": "https://github.com/DanielWinning/routing-component/tree/1.3.0"
-            },
-            "time": "2023-11-23T22:23:43+00:00"
-        },
         {
             "name": "latte/latte",
             "version": "dev-master",
@@ -232,23 +94,68 @@
             "time": "2023-11-23T00:26:28+00:00"
         },
         {
-            "name": "lumax/framework-component",
-            "version": "0.2.0",
+            "name": "lumax/dependency-injection-component",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/DanielWinning/framework-component.git",
-                "reference": "b1de1fdd15fc749a8c008e2d2d411560292d3d01"
+                "url": "https://github.com/DanielWinning/dependency-injection-component.git",
+                "reference": "6330f77aef22f25d1d0f193f1ced6c07543fac8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/b1de1fdd15fc749a8c008e2d2d411560292d3d01",
-                "reference": "b1de1fdd15fc749a8c008e2d2d411560292d3d01",
+                "url": "https://api.github.com/repos/DanielWinning/dependency-injection-component/zipball/6330f77aef22f25d1d0f193f1ced6c07543fac8e",
+                "reference": "6330f77aef22f25d1d0f193f1ced6c07543fac8e",
                 "shasum": ""
             },
             "require": {
-                "dannyxcii/dependency-injection-component": "^1.1",
-                "dannyxcii/routing-component": "^1.3",
+                "psr/container": "^2.0",
+                "symfony/yaml": "^6.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Luma\\DependencyInjectionComponent\\": "src/",
+                    "Luma\\DependencyInjectionComponentTests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Winning",
+                    "email": "daniel@winningsoftware.co.uk"
+                }
+            ],
+            "description": "A Dependency Injection Package",
+            "support": {
+                "issues": "https://github.com/DanielWinning/dependency-injection-component/issues",
+                "source": "https://github.com/DanielWinning/dependency-injection-component/tree/1.1.6"
+            },
+            "time": "2023-11-25T23:47:49+00:00"
+        },
+        {
+            "name": "lumax/framework-component",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DanielWinning/framework-component.git",
+                "reference": "87a16002741aa3809b0e34b3ab7eb6eeffa577da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/87a16002741aa3809b0e34b3ab7eb6eeffa577da",
+                "reference": "87a16002741aa3809b0e34b3ab7eb6eeffa577da",
+                "shasum": ""
+            },
+            "require": {
                 "latte/latte": "^3.0",
+                "lumax/dependency-injection-component": "^1.1",
+                "lumax/routing-component": "^1.3",
                 "tracy/tracy": "^2.10"
             },
             "require-dev": {
@@ -270,11 +177,105 @@
                     "email": "daniel@winningsoftware.co.uk"
                 }
             ],
+            "description": "Core component for the Luma Framework.",
             "support": {
                 "issues": "https://github.com/DanielWinning/framework-component/issues",
-                "source": "https://github.com/DanielWinning/framework-component/tree/0.2.0"
+                "source": "https://github.com/DanielWinning/framework-component/tree/0.2.2"
             },
-            "time": "2023-11-24T13:21:25+00:00"
+            "time": "2023-11-25T23:54:59+00:00"
+        },
+        {
+            "name": "lumax/http-component",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DanielWinning/http-component.git",
+                "reference": "cecb6cdc8284adb919520b209e0f5f54e9ff1a06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DanielWinning/http-component/zipball/cecb6cdc8284adb919520b209e0f5f54e9ff1a06",
+                "reference": "cecb6cdc8284adb919520b209e0f5f54e9ff1a06",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "psr/http-client": "^1.0",
+                "psr/http-message": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Luma\\HttpComponent\\": "src/",
+                    "Luma\\HttpComponentTests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Winning",
+                    "email": "daniel@winningsoftware.co.uk"
+                }
+            ],
+            "description": "A component for handling HTTP Requests/Responses",
+            "support": {
+                "issues": "https://github.com/DanielWinning/http-component/issues",
+                "source": "https://github.com/DanielWinning/http-component/tree/2.0.4"
+            },
+            "time": "2023-11-25T23:31:37+00:00"
+        },
+        {
+            "name": "lumax/routing-component",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DanielWinning/routing-component.git",
+                "reference": "f5bbccaf12b70d155cebfa943f9c24201f2d5c01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DanielWinning/routing-component/zipball/f5bbccaf12b70d155cebfa943f9c24201f2d5c01",
+                "reference": "f5bbccaf12b70d155cebfa943f9c24201f2d5c01",
+                "shasum": ""
+            },
+            "require": {
+                "lumax/http-component": "^2.0",
+                "psr/container": "^2.0",
+                "psr/http-message": "^2.0",
+                "symfony/yaml": "^6.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Luma\\RoutingComponent\\": "src/",
+                    "Luma\\RoutingComponentTests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Winning",
+                    "email": "daniel@winningsoftware.co.uk"
+                }
+            ],
+            "description": "A dynamic PHP Routing Component.",
+            "support": {
+                "issues": "https://github.com/DanielWinning/routing-component/issues",
+                "source": "https://github.com/DanielWinning/routing-component/tree/1.3.3"
+            },
+            "time": "2023-11-25T23:40:20+00:00"
         },
         {
             "name": "psr/container",

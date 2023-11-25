@@ -1,10 +1,10 @@
 {
-    "name": "lumax/luma",
+    "name": "vendor/luma-project",
     "type": "library",
     "authors": [
         {
-            "name": "Daniel Winning",
-            "email": "daniel@winningwebdesign.co.uk"
+            "name": "Your Name",
+            "email": "yourname@email.com"
         }
     ],
     "autoload": {
@@ -14,13 +14,13 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "lumax/framework-component": "0.2.0"
+        "lumax/framework-component": "0.2.2"
     },
     "scripts": {
         "post-install-cmd": [
             "Luma\\Framework\\Install\\Installer::install"
         ]
     },
-    "version": "0.1.4",
+    "version": "0.1.5",
     "license": "GPL-3.0-or-later"
 }

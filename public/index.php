@@ -1,9 +1,9 @@
 <?php
 
-use DannyXCII\HttpComponent\Request;
-use DannyXCII\HttpComponent\StreamBuilder;
-use DannyXCII\HttpComponent\Web\WebServerUri;
 use Luma\Framework\Luma;
+use Luma\HttpComponent\Request;
+use Luma\HttpComponent\StreamBuilder;
+use Luma\HttpComponent\Web\WebServerUri;
 use Tracy\Debugger;
 
 require_once sprintf('%s/vendor/autoload.php', dirname(__DIR__));

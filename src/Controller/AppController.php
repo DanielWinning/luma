@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use DannyXCII\HttpComponent\Response;
 use Luma\Framework\Controller\LumaController;
+use Luma\HttpComponent\Response;
 
 class AppController extends LumaController
 {
