@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92fc11fac31115805f8ecc9f3e3d4611",
+    "content-hash": "6fcc95e0cd252b3a527d7ff9b0b416ff",
     "packages": [
         {
             "name": "dannyxcii/dependency-injection-component",
@@ -99,16 +99,16 @@
         },
         {
             "name": "dannyxcii/routing-component",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DanielWinning/routing-component.git",
-                "reference": "de9eb5940c92b30a550618b290f1d692dff291b0"
+                "reference": "8fca61020b2ece334c25960a64370bde208c7a96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/routing-component/zipball/de9eb5940c92b30a550618b290f1d692dff291b0",
-                "reference": "de9eb5940c92b30a550618b290f1d692dff291b0",
+                "url": "https://api.github.com/repos/DanielWinning/routing-component/zipball/8fca61020b2ece334c25960a64370bde208c7a96",
+                "reference": "8fca61020b2ece334c25960a64370bde208c7a96",
                 "shasum": ""
             },
             "require": {
@@ -140,9 +140,9 @@
             "description": "A dynamic PHP Routing Component",
             "support": {
                 "issues": "https://github.com/DanielWinning/routing-component/issues",
-                "source": "https://github.com/DanielWinning/routing-component/tree/1.2.0"
+                "source": "https://github.com/DanielWinning/routing-component/tree/1.3.0"
             },
-            "time": "2023-09-09T10:02:26+00:00"
+            "time": "2023-11-23T22:23:43+00:00"
         },
         {
             "name": "latte/latte",
@@ -150,12 +150,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/latte.git",
-                "reference": "e24c4123659d0177bf28561827e117fe7453c355"
+                "reference": "81288176504b6f01e88586e84adb7be0f1db5f09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/latte/zipball/e24c4123659d0177bf28561827e117fe7453c355",
-                "reference": "e24c4123659d0177bf28561827e117fe7453c355",
+                "url": "https://api.github.com/repos/nette/latte/zipball/81288176504b6f01e88586e84adb7be0f1db5f09",
+                "reference": "81288176504b6f01e88586e84adb7be0f1db5f09",
                 "shasum": ""
             },
             "require": {
@@ -177,6 +177,7 @@
             "suggest": {
                 "ext-fileinfo": "to use filter |datastream",
                 "ext-iconv": "to use filters |reverse, |substring",
+                "ext-intl": "to use filters |localDate, |localTime",
                 "ext-mbstring": "to use filters like lower, upper, capitalize, ...",
                 "nette/php-generator": "to use tag {templatePrint}",
                 "nette/utils": "to use filter |webalize"
@@ -226,29 +227,32 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/latte/issues",
-                "source": "https://github.com/nette/latte/tree/v3.0.9"
+                "source": "https://github.com/nette/latte/tree/master"
             },
-            "time": "2023-09-08T10:05:30+00:00"
+            "time": "2023-11-23T00:26:28+00:00"
         },
         {
             "name": "lumax/framework-component",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DanielWinning/framework-component.git",
-                "reference": "9759e9a7b72a311b488c9ccdd7dd08cb89fe74f1"
+                "reference": "b1de1fdd15fc749a8c008e2d2d411560292d3d01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/9759e9a7b72a311b488c9ccdd7dd08cb89fe74f1",
-                "reference": "9759e9a7b72a311b488c9ccdd7dd08cb89fe74f1",
+                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/b1de1fdd15fc749a8c008e2d2d411560292d3d01",
+                "reference": "b1de1fdd15fc749a8c008e2d2d411560292d3d01",
                 "shasum": ""
             },
             "require": {
                 "dannyxcii/dependency-injection-component": "^1.1",
-                "dannyxcii/routing-component": "^1.2",
+                "dannyxcii/routing-component": "^1.3",
                 "latte/latte": "^3.0",
                 "tracy/tracy": "^2.10"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.4"
             },
             "type": "library",
             "autoload": {
@@ -268,9 +272,9 @@
             ],
             "support": {
                 "issues": "https://github.com/DanielWinning/framework-component/issues",
-                "source": "https://github.com/DanielWinning/framework-component/tree/0.1.1"
+                "source": "https://github.com/DanielWinning/framework-component/tree/0.2.0"
             },
-            "time": "2023-09-12T19:01:55+00:00"
+            "time": "2023-11-24T13:21:25+00:00"
         },
         {
             "name": "psr/container",
@@ -278,12 +282,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "90db7b9ac2a2c5b849fcb69dde58f3ae182c68f5"
+                "reference": "707984727bd5b2b670e59559d3ed2500240cf875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/90db7b9ac2a2c5b849fcb69dde58f3ae182c68f5",
-                "reference": "90db7b9ac2a2c5b849fcb69dde58f3ae182c68f5",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/707984727bd5b2b670e59559d3ed2500240cf875",
+                "reference": "707984727bd5b2b670e59559d3ed2500240cf875",
                 "shasum": ""
             },
             "require": {
@@ -322,9 +326,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/master"
+                "source": "https://github.com/php-fig/container"
             },
-            "time": "2022-07-19T17:36:59+00:00"
+            "time": "2023-09-22T11:11:30+00:00"
         },
         {
             "name": "psr/http-client",
@@ -332,12 +336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-client.git",
-                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31"
+                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/0955afe48220520692d2d09f7ab7e0f93ffd6a31",
-                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/bb5906edc1c324c9a05aa0873d40117941e5fa90",
+                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90",
                 "shasum": ""
             },
             "require": {
@@ -375,9 +379,9 @@
                 "psr-18"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-client/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-client"
             },
-            "time": "2023-04-10T20:12:12+00:00"
+            "time": "2023-09-23T14:17:50+00:00"
         },
         {
             "name": "psr/http-message",
@@ -483,7 +487,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -590,12 +594,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "fd863419d4130619f8dbacb87825c4b29478672e"
+                "reference": "4f9237a1bb42455d609e6687d2613dde5b41a587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/fd863419d4130619f8dbacb87825c4b29478672e",
-                "reference": "fd863419d4130619f8dbacb87825c4b29478672e",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/4f9237a1bb42455d609e6687d2613dde5b41a587",
+                "reference": "4f9237a1bb42455d609e6687d2613dde5b41a587",
                 "shasum": ""
             },
             "require": {
@@ -654,7 +658,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-07-31T07:16:29+00:00"
+            "time": "2023-11-06T11:00:25+00:00"
         },
         {
             "name": "tracy/tracy",
@@ -662,12 +666,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "fc1dfa726573e1f2ea0795b1ad1e8d4fc76a6a21"
+                "reference": "86bdba4aa0f707d3f125933931d3df6e5c7aad79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/fc1dfa726573e1f2ea0795b1ad1e8d4fc76a6a21",
-                "reference": "fc1dfa726573e1f2ea0795b1ad1e8d4fc76a6a21",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/86bdba4aa0f707d3f125933931d3df6e5c7aad79",
+                "reference": "86bdba4aa0f707d3f125933931d3df6e5c7aad79",
                 "shasum": ""
             },
             "require": {
@@ -727,9 +731,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/tracy/issues",
-                "source": "https://github.com/nette/tracy/tree/v2.10"
+                "source": "https://github.com/nette/tracy/tree/v2.10.5"
             },
-            "time": "2023-09-10T16:31:59+00:00"
+            "time": "2023-10-16T21:54:18+00:00"
         }
     ],
     "packages-dev": [],
