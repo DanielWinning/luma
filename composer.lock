@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a6716894a7210c334dfde26208f9080",
+    "content-hash": "6adc30c2a3b0dbc7f66571073f6ba4a7",
     "packages": [
         {
             "name": "latte/latte",
@@ -140,16 +140,16 @@
         },
         {
             "name": "lumax/framework-component",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DanielWinning/framework-component.git",
-                "reference": "87a16002741aa3809b0e34b3ab7eb6eeffa577da"
+                "reference": "b4da056caee0706de476b0a9a2bc92b4f01645c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/87a16002741aa3809b0e34b3ab7eb6eeffa577da",
-                "reference": "87a16002741aa3809b0e34b3ab7eb6eeffa577da",
+                "url": "https://api.github.com/repos/DanielWinning/framework-component/zipball/b4da056caee0706de476b0a9a2bc92b4f01645c1",
+                "reference": "b4da056caee0706de476b0a9a2bc92b4f01645c1",
                 "shasum": ""
             },
             "require": {
@@ -180,9 +180,9 @@
             "description": "Core component for the Luma Framework.",
             "support": {
                 "issues": "https://github.com/DanielWinning/framework-component/issues",
-                "source": "https://github.com/DanielWinning/framework-component/tree/0.2.2"
+                "source": "https://github.com/DanielWinning/framework-component/tree/0.2.3"
             },
-            "time": "2023-11-25T23:54:59+00:00"
+            "time": "2023-11-26T14:09:25+00:00"
         },
         {
             "name": "lumax/http-component",
