@@ -1,3 +1,5 @@
+![Luma PHP Logo](https://danielwinning.co.uk/images/luma.svg "Luma PHP")
+
 # Luma PHP Framework
 
 Welcome to Luma, a minimalist PHP framework designed for straightforward web development. This basic README introduces

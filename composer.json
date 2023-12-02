@@ -15,7 +15,7 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "lumax/framework-component": "0.2.3"
+        "lumax/framework-component": "0.2.5"
     },
     "scripts": {
         "post-install-cmd": [
