@@ -1,11 +1,11 @@
 {
-    "name": "vendor/luma-project",
+    "name": "lumax/luma",
     "description": "A Luma Project.",
     "type": "library",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "yourname@email.com"
+            "name": "Daniel Winning",
+            "email": "daniel@winningsoftware.co.uk"
         }
     ],
     "autoload": {
@@ -22,6 +22,6 @@
             "Luma\\Framework\\Install\\Installer::install"
         ]
     },
-    "version": "0.1.9",
+    "version": "0.1.10",
     "license": "GPL-3.0-or-later"
 }
