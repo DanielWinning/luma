@@ -15,13 +15,13 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "lumax/framework-component": "0.2.5"
+        "lumax/framework-component": "0.2.7"
     },
     "scripts": {
-        "post-install-cmd": [
+        "post-create-project-cmd": [
             "Luma\\Framework\\Install\\Installer::install"
         ]
     },
-    "version": "0.1.7",
+    "version": "0.1.8",
     "license": "GPL-3.0-or-later"
 }
