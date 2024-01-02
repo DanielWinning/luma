@@ -1,5 +1,6 @@
 <?php
 
+use Dotenv\Dotenv;
 use Luma\Framework\Luma;
 use Luma\HttpComponent\Request;
 use Luma\HttpComponent\StreamBuilder;
@@ -9,7 +10,10 @@ use Tracy\ILogger;
 
 require_once sprintf('%s/vendor/autoload.php', dirname(__DIR__));
 
-Debugger::enable(Debugger::Development);
+$dotenv = Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
+
+Debugger::enable($_ENV['MODE'] === 'production');
 Debugger::$logDirectory = sprintf('%s/log', dirname(__DIR__));
 
 try {

@@ -15,7 +15,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "lumax/framework-component": "0.2.7"
+        "lumax/framework-component": "0.3.1"
     },
     "scripts": {
         "post-create-project-cmd": [
