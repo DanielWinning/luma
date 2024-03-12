@@ -11,5 +11,9 @@
     "typescript": "^5.3.2",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/DanielWinning/luma"
   }
 }
