@@ -13,12 +13,16 @@ require_once sprintf('%s/vendor/autoload.php', dirname(__DIR__));
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
-Debugger::enable($_ENV['MODE'] === 'production');
+Debugger::enable($_ENV['ENVIRONMENT'] === 'production');
 Debugger::$logDirectory = sprintf('%s/log', dirname(__DIR__));
 
 try {
-    $app = new Luma(sprintf('%s/config', dirname(__DIR__)));
-    $app->run(new Request(
+    $luma = new Luma(
+        sprintf('%s/config', dirname(__DIR__)),
+        sprintf('%s/views', dirname(__DIR__)),
+        sprintf('%s/cache', dirname(__DIR__))
+    );
+    $luma->run(new Request(
         $_SERVER['REQUEST_METHOD'],
         WebServerUri::generate(),
         getallheaders(),
