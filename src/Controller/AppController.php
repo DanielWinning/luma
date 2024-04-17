@@ -12,6 +12,6 @@ class AppController extends LumaController
      */
     public function index(): Response
     {
-        return $this->render('app/index', []);
+        return $this->render('app/index');
     }
 }
