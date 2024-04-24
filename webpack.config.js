@@ -1,8 +1,12 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin');
 
 module.exports = {
-    entry: './assets/app.ts',
+    entry: {
+        app: './assets/app.ts',
+        styles: './assets/styles/app.scss'
+    },
     module: {
         rules: [
             {
@@ -11,24 +15,30 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.css$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'sass-loader'
                 ],
             },
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'app.css',
+            filename: '[name].css',
         }),
+        new IgnoreEmitPlugin(['styles.js'])
     ],
     resolve: {
-        extensions: ['.ts', '.js', '.css']
+        extensions: ['.ts', '.js', '.css', '.scss']
+    },
+    watchOptions: {
+        poll: true,
+        ignored: /node_modules/
     },
     output: {
-        filename: 'app.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'public/assets/')
     }
 }

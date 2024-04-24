@@ -2,3 +2,8 @@ routes:
   index:
     path: '/'
     handler: ['App\Controller\AppController', 'index']
+
+  security_login:
+    path: '/login'
+    methods: ['POST', 'GET']
+    handler: ['App\Security\Controller\SecurityController', 'login']

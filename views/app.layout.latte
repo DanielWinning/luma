@@ -6,12 +6,13 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>My Luma App</title>
+    <title>{$_ENV['APP_NAME']}</title>
 
-    <link rel="stylesheet" type="text/css" href="/assets/app.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
     {block header}{/block}
 </head>
 <body>
+    {include 'components/header.latte', user: $user}
     {block content}{/block}
     <script src="/assets/app.js"></script>
 </body>

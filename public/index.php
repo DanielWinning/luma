@@ -13,6 +13,8 @@ require_once sprintf('%s/vendor/autoload.php', dirname(__DIR__));
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 
+session_start();
+
 Debugger::enable($_ENV['ENVIRONMENT'] === 'production');
 Debugger::$logDirectory = sprintf('%s/log', dirname(__DIR__));
 
@@ -26,7 +28,7 @@ try {
         $_SERVER['REQUEST_METHOD'],
         WebServerUri::generate(),
         getallheaders(),
-        StreamBuilder::build('')
+        StreamBuilder::build(file_get_contents('php://input'))
     ));
 } catch (\Exception|\Throwable $exception) {
     Debugger::log($exception, ILogger::EXCEPTION);

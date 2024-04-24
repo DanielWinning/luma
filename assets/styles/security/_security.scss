@@ -1,0 +1,51 @@
+@import '../variables';
+
+.security {
+  width: 380px;
+  max-width: 90%;
+  margin: 0 auto;
+
+  form {
+    display: grid;
+    grid-gap: .75rem;
+
+    label {
+      display: block;
+    }
+    input {
+      &[type='email'],
+      &[type='password'] {
+        padding: .5rem;
+        width: 100%;
+      }
+      &[type='submit'] {
+        border: 1px solid $primaryHue;
+        padding: .5rem .75rem;
+        font-size: 1.1rem;
+        background-color: $primaryHue;
+        cursor: pointer;
+        color: #fff;
+        transition: .4s ease;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    div {
+      margin: .25rem 0;
+
+      &:first-of-type,
+      &:last-of-type {
+        text-align: center;
+      }
+      &.security-errors {
+        background-color: #af4b4b;
+        padding: .5rem;
+        border-radius: 2px;
+        font-size: .9rem;
+        text-align: center;
+      }
+    }
+  }
+}

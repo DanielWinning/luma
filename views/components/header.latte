@@ -1,0 +1,14 @@
+<header style="text-align: right; padding: 1rem 0; width: 840px; max-width: 90%; margin: 0 auto;">
+    {if $user}
+        <a href="/logout" style="text-decoration: none; color: azure">
+            Logout
+        </a>
+    {else}
+        <a href="/login" style="text-decoration: none; color: azure; margin-right: .75rem">
+            Login
+        </a>
+        <a href="/register" style="text-decoration: none; color: azure">
+            Register
+        </a>
+    {/if}
+</header>
