@@ -10,18 +10,18 @@ div[class^='message-'] {
     color: #fff;
   }
   &.message-info {
-    background-color: #4444f1;
+    background-color: $messageInfo;
   }
   &.message-error {
-    background-color: #b23d3d;
+    background-color: $messageError;
   }
   &.message-success {
-    background-color: #68b468;
+    background-color: $messageSuccess;
   }
   &.message-notice {
-    background-color: gray;
+    background-color: $messageNotice;
   }
   &.message-warning {
-    background-color: #de9c39;
+    background-color: $messageWarning;
   }
 }
