@@ -1,3 +1,6 @@
 services:
   http_client:
     class: Luma\HttpComponent\HttpClient
+
+  security.authentication_helper:
+    class: App\Security\Services\AuthenticationHelper

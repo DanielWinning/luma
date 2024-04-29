@@ -1,57 +1,44 @@
 {layout '../app.layout.latte'}
 
+{block title}Login | {/block}
+
+{block header}
+    <link rel="stylesheet" href="/assets/security.css" />
+{/block}
 {block content}
-    <div style="background-color: #151431; min-height: 100vh; color: #a9a9a9; display: flex; align-items: center; justify-content: center">
-        {if isset($user) && $user}
-            <p>You are already logged in as {$user->getEmailAddress()}.</p>
-            <a href="/" style="color: azure; text-decoration: none">Go Home</a>
-        {else}
-            <section class="security">
-                <form method="POST" style="display: grid; grid-gap: .75rem;">
-                    <div>
-                        <a href="/" title="Return to Homepage" aria-label="Return to Homepage Link">
-                            <img src="/images/luma.svg" style="max-width: 60%; height: auto; margin: 0 auto;"/>
-                        </a>
-                    </div>
-                    {if count($errors)}
-                        <div class="security-errors">
-                            {foreach $errors as $error}
-                                <p>
-                                    {$error}
-                                </p>
-                            {/foreach}
-                        </div>
-                    {/if}
-                    <div>
-                        <label for="{App\Security\Entity\User::getSecurityIdentifier()}">
-                            User ID
-                        </label>
-                        <input type="email"
-                               name="{App\Security\Entity\User::getSecurityIdentifier()}"
-                               id="{App\Security\Entity\User::getSecurityIdentifier()}"
-                               placeholder="email address"
-                               aria-label="Email Address"
-                               aria-required="true"
-                               required />
-                    </div>
-                    <div>
-                        <label for="password">
-                            Password
-                        </label>
-                        <input type="password"
-                               name="password"
-                               id="password"
-                               placeholder="password"
-                               aria-label="Password"
-                               aria-required="true"
-                               required />
-                    </div>
-                    <div>
-                        <input type="submit"
-                               value="Log In" />
-                    </div>
-                </form>
-            </section>
-        {/if}
-    </div>
+    <section class="security">
+        <form method="POST">
+            <h1>
+                Login to your account
+            </h1>
+            <div>
+                <label for="{App\Security\Entity\User::getSecurityIdentifier()}">
+                    Email Address
+                </label>
+                <input type="email"
+                       name="{App\Security\Entity\User::getSecurityIdentifier()}"
+                       id="{App\Security\Entity\User::getSecurityIdentifier()}"
+                       placeholder="email address"
+                       aria-label="Email Address"
+                       aria-required="true"
+                       required />
+            </div>
+            <div>
+                <label for="password">
+                    Password
+                </label>
+                <input type="password"
+                       name="password"
+                       id="password"
+                       placeholder="password"
+                       aria-label="Password"
+                       aria-required="true"
+                       required />
+            </div>
+            <div>
+                <input type="submit"
+                       value="Log In" />
+            </div>
+        </form>
+    </section>
 {/block}

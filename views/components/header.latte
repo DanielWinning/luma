@@ -1,14 +1,36 @@
-<header style="text-align: right; padding: 1rem 0; width: 840px; max-width: 90%; margin: 0 auto;">
-    {if $user}
-        <a href="/logout" style="text-decoration: none; color: azure">
-            Logout
-        </a>
-    {else}
-        <a href="/login" style="text-decoration: none; color: azure; margin-right: .75rem">
-            Login
-        </a>
-        <a href="/register" style="text-decoration: none; color: azure">
-            Register
-        </a>
-    {/if}
+<header>
+    <div>
+        <div class="logo-container">
+            <a href="/" title="Site Logo" aria-label="Site Logo">
+                <img src="/images/luma.svg" />
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                {if $user}
+                    <li>
+                        <a href="/logout">
+                            Logout
+                        </a>
+                    </li>
+                {else}
+                    <li>
+                        <a href="/login">
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/register">
+                            Register
+                        </a>
+                    </li>
+                {/if}
+            </ul>
+        </nav>
+    </div>
 </header>

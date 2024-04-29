@@ -3,7 +3,17 @@ routes:
     path: '/'
     handler: ['App\Controller\AppController', 'index']
 
-  security_login:
+  security.login:
     path: '/login'
     methods: ['POST', 'GET']
     handler: ['App\Security\Controller\SecurityController', 'login']
+
+  security.logout:
+    path: '/logout'
+    methods: ['GET']
+    handler: ['App\Security\Controller\SecurityController', 'logout']
+
+  security.register:
+    path: '/register'
+    methods: ['GET', 'POST']
+    handler: ['App\Security\Controller\SecurityController', 'register']

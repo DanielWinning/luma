@@ -1,0 +1,11 @@
+{foreach $messages as $type => $messageBag}
+    {if count($messages)}
+        <div class="message-{$type}">
+            {foreach $messageBag as $message}
+                <p>
+                    {$message->text()}
+                </p>
+            {/foreach}
+        </div>
+    {/if}
+{/foreach}

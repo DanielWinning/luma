@@ -1,18 +1,26 @@
-@import '../variables';
+@import '../global/variables';
 
 .security {
-  width: 380px;
-  max-width: 90%;
-  margin: 0 auto;
+  margin: 1.5rem auto;
 
+  .already-logged-in {
+    text-align: center;
+  }
   form {
+    width: 380px;
+    max-width: 90%;
     display: grid;
     grid-gap: .75rem;
+    margin: 0 auto;
 
+    h1 {
+      text-align: center;
+    }
     label {
       display: block;
     }
     input {
+      &[type='text'],
       &[type='email'],
       &[type='password'] {
         padding: .5rem;
@@ -35,15 +43,7 @@
     div {
       margin: .25rem 0;
 
-      &:first-of-type,
       &:last-of-type {
-        text-align: center;
-      }
-      &.security-errors {
-        background-color: #af4b4b;
-        padding: .5rem;
-        border-radius: 2px;
-        font-size: .9rem;
         text-align: center;
       }
     }
