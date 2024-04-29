@@ -1,9 +1,10 @@
 # Luma | Luma Framework Changelog
 
-## [Unreleased]
+## [1.0.0] - 2024-04-29
 ### Added
 - Added `CHANGELOG.md`
 - Implemented `lumax/security-component`
+- See https://github.com/DanielWinning/framework-component/releases/tag/1.0.0
 
 ### Changed
 - N/A
@@ -18,7 +19,7 @@
 - N/A
 
 ### Security
-- Updated `lumax/aurora-db` from `1.0.0` to `2.4.0`
+- Updated dependencies
 
 ---
 
