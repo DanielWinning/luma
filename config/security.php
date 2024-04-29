@@ -1,12 +1,16 @@
 <?php
 
+use App\Security\Entity\User;
+use Luma\SecurityComponent\Authentication\Authenticators\DatabaseAuthenticator;
+use Luma\SecurityComponent\Authentication\Providers\DatabaseUserProvider;
+
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 return [
-    \Luma\SecurityComponent\Authentication\Providers\DatabaseUserProvider::class => [
-        \App\Security\Entity\User::class,
+    DatabaseUserProvider::class => [
+        User::class,
     ],
-    \Luma\SecurityComponent\Authentication\Authenticators\DatabaseAuthenticator::class => [
-        new \Luma\SecurityComponent\Authentication\Providers\DatabaseUserProvider(\App\Security\Entity\User::class),
+    DatabaseAuthenticator::class => [
+        new DatabaseUserProvider(User::class),
     ],
 ];
