@@ -4,44 +4,27 @@ namespace App\Security\Controller;
 
 use App\Security\Entity\Role;
 use App\Security\Entity\User;
-use App\Security\Services\AuthenticationHelper;
 use Luma\AuroraDatabase\Utils\Collection;
 use Luma\Framework\Controller\LumaController;
 use Luma\Framework\Luma;
 use Luma\Framework\Messages\FlashMessage;
-use Luma\HttpComponent\HttpClient;
 use Luma\HttpComponent\Request;
 use Luma\HttpComponent\Response;
+use Luma\RoutingComponent\Attribute\RequireUnauthenticated;
 use Luma\SecurityComponent\Authentication\Password;
 use Tracy\Debugger;
 use Tracy\ILogger;
 
 class SecurityController extends LumaController
 {
-    private AuthenticationHelper $authenticationHelper;
-    private HttpClient $httpClient;
-
-    /**
-     * @param AuthenticationHelper $authenticationHelper
-     * @param HttpClient $httpClient
-     */
-    public function __construct(AuthenticationHelper $authenticationHelper, HttpClient $httpClient)
-    {
-        parent::__construct();
-        $this->authenticationHelper = $authenticationHelper;
-    }
-
     /**
      * @param Request $request
      *
      * @return Response
      */
+    #[RequireUnauthenticated]
     public function login(Request $request): Response
     {
-        if ($this->authenticationHelper->isAlreadyLoggedIn('login')) {
-            return $this->redirect('/');
-        }
-
         if ($request->getMethod() === 'POST') {
             if (!$request->get(User::getSecurityIdentifier()) || !$request->get('password')) {
                 $this->addFlashMessage(
@@ -60,7 +43,7 @@ class SecurityController extends LumaController
             if (!$loginResult->isAuthenticated()) {
                 $this->addFlashMessage(
                     new FlashMessage('Invalid credentials, please check and try again.'),
-                    FlashMessage::ERROR,
+                    FlashMessage::ERROR
                 );
             } else {
                 $this->addFlashMessage(
@@ -97,12 +80,9 @@ class SecurityController extends LumaController
      *
      * @return Response
      */
+    #[RequireUnauthenticated]
     public function register(Request $request): Response
     {
-        if ($this->authenticationHelper->isAlreadyLoggedIn('registration')) {
-            return $this->redirect('/');
-        }
-
         if ($request->getMethod() === 'POST') {
             $emailAddress = $request->get('emailAddress');
             $username = $request->get('username');

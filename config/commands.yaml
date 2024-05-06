@@ -1,0 +1,2 @@
+commands:
+  luma:cache:clear: Luma\Framework\Commands\CacheClearCommand

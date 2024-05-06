@@ -1,5 +1,28 @@
 # Luma | Luma Framework Changelog
 
+## [1.1.0] - 2024-05-06
+### Added
+- Added caching for config files
+- Added commands using `bin/luma`
+- Added base `luma:cache:clear` command
+
+### Changed
+- Using route protection attributes in `SecurityController`.
+
+### Deprecated
+- N/A
+
+### Removed
+- Removed `AuthenticationHelper` in favour of attributes.
+
+### Fixed
+- Fix for repeat password field displaying 'Password'.
+
+### Security
+- N/A
+
+---
+
 ## [1.0.0] - 2024-04-29
 ### Added
 - Added `CHANGELOG.md`

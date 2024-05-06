@@ -10,13 +10,10 @@ use Tracy\ILogger;
 
 require_once sprintf('%s/vendor/autoload.php', dirname(__DIR__));
 
-$dotenv = Dotenv::createImmutable(dirname(__DIR__));
+$dotenv = Dotenv::createImmutable(sprintf('%s/config', dirname(__DIR__)));
 $dotenv->load();
 
 session_start();
-
-Debugger::enable($_ENV['ENVIRONMENT'] === 'production');
-Debugger::$logDirectory = sprintf('%s/log', dirname(__DIR__));
 
 try {
     $luma = new Luma(

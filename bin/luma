@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Yaml\Yaml;
+
+$application = new Application();
+
+$commandConfigPath = sprintf('%s/config/commands.yaml', dirname(__DIR__));
+
+if (!file_exists($commandConfigPath)) {
+    exit;
+}
+
+$commands = Yaml::parseFile($commandConfigPath) ?? [];
+
+foreach ($commands['commands'] as $command) {
+    if (class_exists($command)) {
+        $application->add(new $command());
+    }
+}
+
+try {
+    $application->run();
+} catch (Exception $e) {
+    die($e->getMessage());
+}
