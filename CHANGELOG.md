@@ -1,5 +1,27 @@
 # Luma | Luma Framework Changelog
 
+## [Unreleased]
+### Added
+- N/A
+
+### Changed
+- Changed default security button hover text colour to work with the default as well as light backgrounds.
+
+### Deprecated
+- N/A
+
+### Removed
+- N/A
+
+### Fixed
+- Fix for initial database setup where `strUsername` was not using a `UNIQUE KEY`
+- Fix for initial database setup where `strPassword` was using a `UNIQUE KEY`
+
+### Security
+- N/A
+
+---
+
 ## [1.1.0] - 2024-05-06
 ### Added
 - Added caching for config files
