@@ -1,8 +1,8 @@
 # Luma | Luma Framework Changelog
 
-## [Unreleased]
+## [1.2.0]
 ### Added
-- N/A
+- Add `refresh` override to `Security\Entity\User` to ensure `Role` is always joined
 
 ### Changed
 - Changed default security button hover text colour to work with the default as well as light backgrounds.

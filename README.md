@@ -1,5 +1,10 @@
 ![Luma PHP Logo](https://danielwinning.co.uk/images/luma.svg "Luma PHP")
 
+<div>
+<!-- Version Badge -->
+<img src="https://img.shields.io/badge/Version-1.2.0-blue" alt="Version 1.2.0">
+</div>
+
 Welcome to Luma, an _opinionated_ PHP framework.
 
 ```shell
