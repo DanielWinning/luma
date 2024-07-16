@@ -7,10 +7,10 @@ use Luma\AuroraDatabase\Attributes\Column;
 use Luma\AuroraDatabase\Attributes\Identifier;
 use Luma\AuroraDatabase\Attributes\Schema;
 use Luma\AuroraDatabase\Attributes\Table;
+use Luma\AuroraDatabase\Model\Aurora;
 use Luma\AuroraDatabase\Utils\Collection;
 use Luma\SecurityComponent\Attributes\SecurityIdentifier;
 use Luma\SecurityComponent\Authentication\AbstractUser;
-use Luma\Tests\Classes\Role;
 
 #[Schema('Security')]
 #[Table('tblUser')]
@@ -68,5 +68,16 @@ class User extends AbstractUser
     public function getRoles(): Collection
     {
         return $this->roles;
+    }
+
+    /**
+     * @return void
+     */
+    public static function refresh(): void
+    {
+        if (isset($_SESSION['user']) && $_SESSION['user'] instanceof Aurora) {
+            $user = self::find($_SESSION['user']->getId());
+            $_SESSION['user'] = $user->with([Role::class]);
+        }
     }
 }

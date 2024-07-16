@@ -13,7 +13,7 @@ CREATE TABLE tblUser (
     strPassword VARCHAR(255) NOT NULL,
     PRIMARY KEY (intUserId),
     UNIQUE KEY (strEmailAddress),
-    UNIQUE KEY (strPassword)
+    UNIQUE KEY (strUsername)
 );
 
 CREATE TABLE ublPermission (
