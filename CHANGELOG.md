@@ -1,6 +1,6 @@
 # Luma | Luma Framework Changelog
 
-## [1.2.0]
+## [1.2.0] - 2024-07-16
 ### Added
 - Add `refresh` override to `Security\Entity\User` to ensure `Role` is always joined
 
