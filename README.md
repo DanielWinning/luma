@@ -2,7 +2,7 @@
 
 <div>
 <!-- Version Badge -->
-<img src="https://img.shields.io/badge/Version-1.2.0-blue" alt="Version 1.2.0">
+<img src="https://img.shields.io/badge/Version-1.3.0-blue" alt="Version 1.3.0">
 </div>
 
 Welcome to Luma, an _opinionated_ PHP framework.
@@ -11,10 +11,9 @@ Welcome to Luma, an _opinionated_ PHP framework.
 composer create-project lumax/luma my-luma-project
 ```
 
-New updated README for 1.X releases coming soon. Some of the information found
-below may be outdated.
-
 ---
+
+> The information found below may be outdated. This section remains until updated documentation is completed.
 
 - [Installation](#installation)
 - [Get Started](#get-started)

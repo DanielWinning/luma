@@ -20,9 +20,6 @@ class User extends AbstractUser
     #[Column('intUserId')]
     protected int $id;
 
-    #[Column('strUsername')]
-    protected string $username;
-
     #[Column('strPassword')]
     protected string $password;
 
@@ -37,14 +34,6 @@ class User extends AbstractUser
         pivotColumn: 'intRoleId'
     )]
     protected Collection $roles;
-
-    /**
-     * @return string
-     */
-    public function getUsername(): string
-    {
-        return $this->username;
-    }
 
     /**
      * @return string

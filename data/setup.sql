@@ -7,17 +7,15 @@ CREATE SCHEMA Security;
 USE Security;
 
 CREATE TABLE tblUser (
-    intUserId INT(11) UNSIGNED AUTO_INCREMENT NOT NULL,
-    strUsername VARCHAR(60) NOT NULL,
+    intUserId INT UNSIGNED AUTO_INCREMENT NOT NULL,
     strEmailAddress VARCHAR(255) NOT NULL,
     strPassword VARCHAR(255) NOT NULL,
     PRIMARY KEY (intUserId),
-    UNIQUE KEY (strEmailAddress),
-    UNIQUE KEY (strUsername)
+    UNIQUE KEY (strEmailAddress)
 );
 
 CREATE TABLE ublPermission (
-    intPermissionId INT(11) UNSIGNED AUTO_INCREMENT NOT NULL,
+    intPermissionId INT UNSIGNED AUTO_INCREMENT NOT NULL,
     strName VARCHAR(255) NOT NULL,
     strHandle VARCHAR(255) NOT NULL,
     PRIMARY KEY (intPermissionId),
@@ -25,7 +23,7 @@ CREATE TABLE ublPermission (
 );
 
 CREATE TABLE ublRole (
-    intRoleId INT(11) UNSIGNED AUTO_INCREMENT NOT NULL,
+    intRoleId INT UNSIGNED AUTO_INCREMENT NOT NULL,
     strName VARCHAR(255) NOT NULL,
     strHandle VARCHAR(255) NOT NULL UNIQUE,
     PRIMARY KEY (intRoleId),
@@ -33,16 +31,16 @@ CREATE TABLE ublRole (
 );
 
 CREATE TABLE tblRoleUser (
-    intRoleId INT(11) UNSIGNED NOT NULL,
-    intUserId INT(11) UNSIGNED NOT NULL,
+    intRoleId INT UNSIGNED NOT NULL,
+    intUserId INT UNSIGNED NOT NULL,
     FOREIGN KEY (intRoleId) REFERENCES ublRole(intRoleId),
     FOREIGN KEY (intUserId) REFERENCES tblUser(intUserId),
     UNIQUE KEY (intRoleId, intUserId)
 );
 
 CREATE TABLE tblPermissionRole (
-    intPermissionId INT(11) UNSIGNED NOT NULL,
-    intRoleId INT(11) UNSIGNED NOT NULL,
+    intPermissionId INT UNSIGNED NOT NULL,
+    intRoleId INT UNSIGNED NOT NULL,
     FOREIGN KEY (intPermissionId) REFERENCES ublPermission(intPermissionId),
     FOREIGN KEY (intRoleId) REFERENCES ublRole(intRoleId),
     UNIQUE KEY (intPermissionId, intRoleId)
