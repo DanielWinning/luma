@@ -1,5 +1,29 @@
 # Luma | Luma Framework Changelog
 
+## [1.3.0] - 2024-08-24
+### Added
+- Added `ENVIRONMENT` and admin credential variables to `.env.example`
+- Added new `luma:security:populate` command to populate security tables
+
+### Changed
+- Update TypeScript build target to ES6
+- Update setup SQL script to remove `INT` column lengths
+
+### Deprecated
+- N/A
+
+### Removed
+- Removed `data/populate.php` in favour of the new `luma:security:populate` command
+- Removed username from the default `User` model
+
+### Fixed
+- N/A
+
+### Security
+- N/A
+
+---
+
 ## [1.2.0] - 2024-07-16
 ### Added
 - Add `refresh` override to `Security\Entity\User` to ensure `Role` is always joined

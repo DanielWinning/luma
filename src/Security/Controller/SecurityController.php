@@ -85,11 +85,10 @@ class SecurityController extends LumaController
     {
         if ($request->getMethod() === 'POST') {
             $emailAddress = $request->get('emailAddress');
-            $username = $request->get('username');
             $password = $request->get('password');
             $repeatPassword = $request->get('repeatPassword');
 
-            if (!$emailAddress || !$username || !$password || !$repeatPassword) {
+            if (!$emailAddress || !$password || !$repeatPassword) {
                 $this->addFlashMessage(
                     new FlashMessage('Invalid request data, please fill in all required fields.'),
                     FlashMessage::ERROR
@@ -109,16 +108,7 @@ class SecurityController extends LumaController
 
             try {
                 $existingUserByEmailAddress = User::select(['emailAddress'])->whereIs('emailAddress', $emailAddress)->get();
-                $existingUserByUsername = User::select(['username'])->whereIs('username', $username)->get();
                 $redirectWithErrors = false;
-
-                if ($existingUserByUsername) {
-                    $this->addFlashMessage(
-                        new FlashMessage('A user already exists with this username.'),
-                        FlashMessage::ERROR
-                    );
-                    $redirectWithErrors = true;
-                }
 
                 if ($existingUserByEmailAddress) {
                     $this->addFlashMessage(
@@ -133,7 +123,6 @@ class SecurityController extends LumaController
                 }
 
                 $user = User::create([
-                    'username' => $username,
                     'emailAddress' => $emailAddress,
                     'password' => Password::hash($password),
                     'roles' => new Collection([

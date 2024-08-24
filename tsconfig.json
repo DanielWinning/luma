@@ -3,7 +3,7 @@
         "outDir": "./public/assets/js",
         "noImplicitAny": true,
         "module": "commonjs",
-        "target": "es5",
+        "target": "es6",
         "allowJs": true,
         "moduleResolution": "node",
         "esModuleInterop": true,

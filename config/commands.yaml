@@ -1,2 +1,3 @@
 commands:
   luma:cache:clear: Luma\Framework\Commands\CacheClearCommand
+  luma:security:populate: App\Security\Commands\PopulateSecuritySchemaCommand

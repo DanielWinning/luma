@@ -1,0 +1,20 @@
+{
+    "permissions": [
+        {
+            "name": "Manage Users",
+            "handle": "MANAGE_USERS"
+        }
+    ],
+    "roles": [
+        {
+            "name": "Administrator",
+            "handle": "ADMIN",
+            "permissions": ["MANAGE_USERS"]
+        },
+        {
+            "name": "User",
+            "handle": "USER",
+            "permissions": []
+        }
+    ]
+}
