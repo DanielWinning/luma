@@ -23,64 +23,6 @@ class SecurityController extends LumaController
      * @return Response
      */
     #[RequireUnauthenticated]
-    public function login(Request $request): Response
-    {
-        if ($request->getMethod() === 'POST') {
-            if (!$request->get(User::getSecurityIdentifier()) || !$request->get('password')) {
-                $this->addFlashMessage(
-                    new FlashMessage(sprintf('Invalid request, please set %s and password.', User::getSecurityIdentifier())),
-                    FlashMessage::ERROR
-                );
-
-                return $this->redirect('/login');
-            }
-
-            $loginResult = Luma::getAuthenticator()->login(
-                $request->get(User::getSecurityIdentifier()),
-                $request->get('password')
-            );
-
-            if (!$loginResult->isAuthenticated()) {
-                $this->addFlashMessage(
-                    new FlashMessage('Invalid credentials, please check and try again.'),
-                    FlashMessage::ERROR
-                );
-            } else {
-                $this->addFlashMessage(
-                    new FlashMessage('Successfully logged in, welcome back.'),
-                    FlashMessage::SUCCESS
-                );
-
-                return $this->redirect('/');
-            }
-        }
-
-        return $this->render('security/login');
-    }
-
-    /**
-     * @return Response
-     */
-    public function logout(): Response
-    {
-        if ($this->getLoggedInUser()) {
-            Luma::getAuthenticator()->logout();
-
-            $this->addFlashMessage(
-                new FlashMessage('You have successfully logged out of your account.'),
-                FlashMessage::INFO
-            );
-        }
-
-        return $this->redirect('/login');
-    }
-
-    /**
-     * @param Request $request
-     *
-     * @return Response
-     */
-    #[RequireUnauthenticated]
     public function register(Request $request): Response
     {
         if ($request->getMethod() === 'POST') {

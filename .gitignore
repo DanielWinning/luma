@@ -4,3 +4,5 @@
 /composer.lock
 /public/assets/*
 /config/.env
+/.phpunit.result.cache
+/coverage

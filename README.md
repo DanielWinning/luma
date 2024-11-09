@@ -3,9 +3,14 @@
 <div>
 <!-- Version Badge -->
 <img src="https://img.shields.io/badge/Version-1.3.0-blue" alt="Version 1.3.0">
+
+<!-- PHP Coverage Badge -->
+<img src="https://img.shields.io/badge/PHP Coverage-100.00%25-green" alt="PHP Coverage 100.00%">
 </div>
 
-Welcome to Luma, an _opinionated_ PHP framework.
+Welcome to Luma, a _very opinionated_ and strongly typed PHP framework.
+
+Luma isn't for everyone - there are a ton of features included out of the box.
 
 ```shell
 composer create-project lumax/luma my-luma-project

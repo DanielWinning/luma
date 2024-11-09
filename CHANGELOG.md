@@ -1,5 +1,26 @@
 # Luma | Luma Framework Changelog
 
+## [Unreleased]
+### Added
+- N/A
+
+### Changed
+- N/A
+
+### Deprecated
+- N/A
+
+### Removed
+- N/A
+
+### Fixed
+- N/A
+
+### Security
+- N/A
+
+---
+
 ## [1.3.0] - 2024-08-24
 ### Added
 - Added `ENVIRONMENT` and admin credential variables to `.env.example`

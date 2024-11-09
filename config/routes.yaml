@@ -6,12 +6,12 @@ routes:
   security.login:
     path: '/login'
     methods: ['POST', 'GET']
-    handler: ['App\Security\Controller\SecurityController', 'login']
+    handler: ['Luma\SecurityComponent\Controller\SecurityController', 'login']
 
   security.logout:
     path: '/logout'
     methods: ['GET']
-    handler: ['App\Security\Controller\SecurityController', 'logout']
+    handler: ['Luma\SecurityComponent\Controller\SecurityController', 'logout']
 
   security.register:
     path: '/register'

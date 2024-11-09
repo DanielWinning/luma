@@ -20,5 +20,8 @@
   "license": "GPL-3.0-or-later",
   "repository": {
     "url": "https://github.com/DanielWinning/luma"
+  },
+  "dependencies": {
+    "@dannyxcii/badger": "^0.5.0"
   }
 }
