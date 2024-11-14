@@ -21,12 +21,15 @@ class User extends AbstractUser
     #[Column('intUserId')]
     protected int $id;
 
-    #[Column('strPassword')]
-    protected string $password;
-
     #[SecurityIdentifier]
     #[Column('strEmailAddress')]
     protected string $emailAddress;
+
+    #[Column('strUsername')]
+    protected string $username;
+
+    #[Column('strPassword')]
+    protected string $password;
 
     #[AuroraCollection(
         class: Role::class,
@@ -47,6 +50,14 @@ class User extends AbstractUser
     /**
      * @return string
      */
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+
+    /**
+     * @return string
+     */
     public function getPassword(): string
     {
         return $this->password;
@@ -61,6 +72,9 @@ class User extends AbstractUser
     }
 
     /**
+     * Not intended for use within your application. Used for the purpose of refreshing the logged-in user on page load
+     * to avoid using stale data.
+     *
      * @return void
      */
     public static function refresh(): void

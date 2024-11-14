@@ -8,9 +8,11 @@ USE Security;
 
 CREATE TABLE tblUser (
     intUserId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+    strUsername VARCHAR(60) NOT NULL,
     strEmailAddress VARCHAR(255) NOT NULL,
     strPassword VARCHAR(255) NOT NULL,
     PRIMARY KEY (intUserId),
+    UNIQUE KEY (strUsername),
     UNIQUE KEY (strEmailAddress)
 );
 

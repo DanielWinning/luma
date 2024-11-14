@@ -16,4 +16,4 @@ routes:
   security.register:
     path: '/register'
     methods: ['GET', 'POST']
-    handler: ['App\Security\Controller\SecurityController', 'register']
+    handler: ['Luma\SecurityComponent\Controller\SecurityController', 'register']

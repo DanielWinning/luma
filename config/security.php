@@ -1,6 +1,6 @@
 <?php
 
-use App\Security\Entity\User;
+use App\Entity\User;
 use Luma\SecurityComponent\Authentication\Authenticators\DatabaseAuthenticator;
 use Luma\SecurityComponent\Authentication\Providers\DatabaseUserProvider;
 
