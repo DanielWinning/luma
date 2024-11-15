@@ -18,18 +18,18 @@ CREATE TABLE tblUser (
 
 CREATE TABLE ublPermission (
     intPermissionId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    strName VARCHAR(255) NOT NULL,
-    strHandle VARCHAR(255) NOT NULL,
+    strPermissionName VARCHAR(255) NOT NULL,
+    strPermissionHandle VARCHAR(255) NOT NULL,
     PRIMARY KEY (intPermissionId),
-    UNIQUE KEY (strHandle)
+    UNIQUE KEY (strPermissionHandle)
 );
 
 CREATE TABLE ublRole (
     intRoleId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    strName VARCHAR(255) NOT NULL,
-    strHandle VARCHAR(255) NOT NULL UNIQUE,
+    strRoleName VARCHAR(255) NOT NULL,
+    strRoleHandle VARCHAR(255) NOT NULL UNIQUE,
     PRIMARY KEY (intRoleId),
-    UNIQUE KEY (strHandle)
+    UNIQUE KEY (strRoleHandle)
 );
 
 CREATE TABLE tblRoleUser (
