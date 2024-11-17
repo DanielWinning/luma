@@ -11,9 +11,9 @@
     <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
     {block header}{/block}
 </head>
-<body>
+<body class="p-0 m-0 box-border text-gray-400 bg-app-dark">
     {include 'components/messages.latte', messages: $messages}
-    {include 'components/header.latte', user: $user}
+    {include 'components/header/header.latte', user: $user}
     {block content}{/block}
     <script src="/assets/app.js"></script>
 </body>

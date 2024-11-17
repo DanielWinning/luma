@@ -1,11 +1,6 @@
 @import '../global/variables';
 
 .security {
-  margin: 1.5rem auto;
-
-  .already-logged-in {
-    text-align: center;
-  }
   form {
     width: 380px;
     max-width: 90%;
@@ -13,9 +8,6 @@
     grid-gap: .75rem;
     margin: 0 auto;
 
-    h1 {
-      text-align: center;
-    }
     label {
       display: block;
     }

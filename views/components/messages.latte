@@ -1,8 +1,9 @@
+{* class="bg-message-info bg-message-success bg-message-error bg-message-warning bg-message-notice" *}
 {foreach $messages as $type => $messageBag}
     {if count($messages)}
-        <div class="message-{$type}">
+        <div class="bg-message-{$type} text-sm w-full text-center py-1 px-2">
             {foreach $messageBag as $message}
-                <p>
+                <p class="text-white">
                     {$message->text()}
                 </p>
             {/foreach}
