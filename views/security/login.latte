@@ -6,39 +6,7 @@
     <link rel="stylesheet" href="/assets/security.css" />
 {/block}
 {block content}
-    <section class="security">
-        <form method="POST">
-            <h1>
-                Login to your account
-            </h1>
-            <div>
-                <label for="{App\Security\Entity\User::getSecurityIdentifier()}">
-                    Email Address
-                </label>
-                <input type="email"
-                       name="{App\Security\Entity\User::getSecurityIdentifier()}"
-                       id="{App\Security\Entity\User::getSecurityIdentifier()}"
-                       placeholder="email address"
-                       aria-label="Email Address"
-                       aria-required="true"
-                       required />
-            </div>
-            <div>
-                <label for="password">
-                    Password
-                </label>
-                <input type="password"
-                       name="password"
-                       id="password"
-                       placeholder="password"
-                       aria-label="Password"
-                       aria-required="true"
-                       required />
-            </div>
-            <div>
-                <input type="submit"
-                       value="Log In" />
-            </div>
-        </form>
+    <section class="security my-6 mx-auto">
+        {$form->render()|noescape}
     </section>
 {/block}

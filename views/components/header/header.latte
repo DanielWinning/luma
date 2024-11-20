@@ -1,0 +1,20 @@
+<header class="p-4 mx-auto">
+    <div class="my-0 mx-auto flex flex-col justify-center items-center">
+        <div class="mb-4">
+            <a href="/" title="Application Logo" aria-label="Application Logo">
+                <img src="/images/luma.svg" alt="Application Logo" class="w-52 h-auto"/>
+            </a>
+        </div>
+        <nav>
+            <ul class="list-none flex items-center justify-center text-center">
+                {include 'main-menu-link.latte', path: '/', text: 'Home'}
+                {if $user}
+                    {include 'main-menu-link.latte', path: '/logout', text: 'Logout'}
+                {else}
+                    {include 'main-menu-link.latte', path: '/login', text: 'Login'}
+                    {include 'main-menu-link.latte', path: '/register', text: 'Register'}
+                {/if}
+            </ul>
+        </nav>
+    </div>
+</header>

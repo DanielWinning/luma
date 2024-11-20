@@ -1,3 +1,7 @@
 app.name: 'My Luma App'
 app.mode: 'development'
 app.language: 'en'
+
+security.userClass: 'App\Entity\User'
+security.loginTemplate: 'security/login'
+security.registrationTemplate: 'security/register'

@@ -8,26 +8,28 @@ USE Security;
 
 CREATE TABLE tblUser (
     intUserId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+    strUsername VARCHAR(60) NOT NULL,
     strEmailAddress VARCHAR(255) NOT NULL,
     strPassword VARCHAR(255) NOT NULL,
     PRIMARY KEY (intUserId),
+    UNIQUE KEY (strUsername),
     UNIQUE KEY (strEmailAddress)
 );
 
 CREATE TABLE ublPermission (
     intPermissionId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    strName VARCHAR(255) NOT NULL,
-    strHandle VARCHAR(255) NOT NULL,
+    strPermissionName VARCHAR(255) NOT NULL,
+    strPermissionHandle VARCHAR(255) NOT NULL,
     PRIMARY KEY (intPermissionId),
-    UNIQUE KEY (strHandle)
+    UNIQUE KEY (strPermissionHandle)
 );
 
 CREATE TABLE ublRole (
     intRoleId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    strName VARCHAR(255) NOT NULL,
-    strHandle VARCHAR(255) NOT NULL UNIQUE,
+    strRoleName VARCHAR(255) NOT NULL,
+    strRoleHandle VARCHAR(255) NOT NULL UNIQUE,
     PRIMARY KEY (intRoleId),
-    UNIQUE KEY (strHandle)
+    UNIQUE KEY (strRoleHandle)
 );
 
 CREATE TABLE tblRoleUser (

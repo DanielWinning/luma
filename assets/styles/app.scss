@@ -1,15 +1,2 @@
 @import 'global/variables';
-@import 'global/messages';
-@import 'global/header';
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: $primaryFont;
-  color: $primaryTextHue;
-}
-
-body {
-  background-color: $pageBackgroundHue;
-}
+@import 'global/tailwind';

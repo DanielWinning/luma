@@ -1,8 +1,13 @@
 {layout '../app.layout.latte'}
 
 {block content}
-    <div style="max-width: 680px; margin: 3rem auto; padding: 2rem .5rem; text-align: center">
-        <p>
+    <div class="max-w-md text-center py-8 px-2 my-12 mx-auto">
+        {if $user}
+            <p class="py-3">
+                You are logged in as <strong>{$user->getUsername()}</strong>
+            </p>
+        {/if}
+        <p class="py-3">
             Welcome to your new Luma application! Delete or modify this file to start building!
         </p>
     </div>

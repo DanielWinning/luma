@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Security\Entity;
+namespace App\Entity;
 
 use Luma\AuroraDatabase\Attributes\AuroraCollection;
 use Luma\AuroraDatabase\Attributes\Column;
@@ -11,6 +11,7 @@ use Luma\AuroraDatabase\Model\Aurora;
 use Luma\AuroraDatabase\Utils\Collection;
 use Luma\SecurityComponent\Attributes\SecurityIdentifier;
 use Luma\SecurityComponent\Authentication\AbstractUser;
+use Luma\SecurityComponent\Entity\Role;
 
 #[Schema('Security')]
 #[Table('tblUser')]
@@ -20,12 +21,15 @@ class User extends AbstractUser
     #[Column('intUserId')]
     protected int $id;
 
-    #[Column('strPassword')]
-    protected string $password;
-
     #[SecurityIdentifier]
     #[Column('strEmailAddress')]
     protected string $emailAddress;
+
+    #[Column('strUsername')]
+    protected string $username;
+
+    #[Column('strPassword')]
+    protected string $password;
 
     #[AuroraCollection(
         class: Role::class,
@@ -46,6 +50,14 @@ class User extends AbstractUser
     /**
      * @return string
      */
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+
+    /**
+     * @return string
+     */
     public function getPassword(): string
     {
         return $this->password;
@@ -57,16 +69,5 @@ class User extends AbstractUser
     public function getRoles(): Collection
     {
         return $this->roles;
-    }
-
-    /**
-     * @return void
-     */
-    public static function refresh(): void
-    {
-        if (isset($_SESSION['user']) && $_SESSION['user'] instanceof Aurora) {
-            $user = self::find($_SESSION['user']->getId());
-            $_SESSION['user'] = $user->with([Role::class]);
-        }
     }
 }

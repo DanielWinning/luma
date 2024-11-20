@@ -1,5 +1,12 @@
 # Luma | Luma Framework Changelog
 
+## [2.0.0] - 2024-11-20
+### Added
+- Added Tailwind
+- Added PHPUnit
+
+---
+
 ## [1.3.0] - 2024-08-24
 ### Added
 - Added `ENVIRONMENT` and admin credential variables to `.env.example`
