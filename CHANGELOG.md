@@ -1,23 +1,9 @@
 # Luma | Luma Framework Changelog
 
-## [Unreleased]
+## [2.0.0] - 2024-11-20
 ### Added
-- N/A
-
-### Changed
-- N/A
-
-### Deprecated
-- N/A
-
-### Removed
-- N/A
-
-### Fixed
-- N/A
-
-### Security
-- N/A
+- Added Tailwind
+- Added PHPUnit
 
 ---
 

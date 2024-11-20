@@ -1,43 +1,25 @@
-@import '../global/variables';
-
 .security {
   form {
-    width: 380px;
-    max-width: 90%;
-    display: grid;
-    grid-gap: .75rem;
-    margin: 0 auto;
+    @apply my-4 mx-auto max-w-sm w-auto;
 
     label {
-      display: block;
+      @apply block;
     }
     input {
       &[type='text'],
       &[type='email'],
       &[type='password'] {
-        padding: .5rem;
-        width: 100%;
+        @apply w-full p-2;
       }
       &[type='submit'] {
-        border: 1px solid $primaryHue;
-        padding: .5rem .75rem;
-        font-size: 1.1rem;
-        background-color: $primaryHue;
-        cursor: pointer;
-        color: #fff;
-        transition: .4s ease;
-
-        &:hover {
-          background-color: transparent;
-          color: $primaryHue;
-        }
+        @apply py-2 px-3 text-lg bg-app-primary cursor-pointer text-white transition duration-300 ease-in-out border border-solid border-app-primary hover:text-app-primary hover:bg-transparent;
       }
     }
     div {
-      margin: .25rem 0;
+      @apply my-2 mx-0;
 
       &:last-of-type {
-        text-align: center;
+        @apply text-center;
       }
     }
   }

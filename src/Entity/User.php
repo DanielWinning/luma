@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Security\Entity\Role;
 use Luma\AuroraDatabase\Attributes\AuroraCollection;
 use Luma\AuroraDatabase\Attributes\Column;
 use Luma\AuroraDatabase\Attributes\Identifier;
@@ -12,6 +11,7 @@ use Luma\AuroraDatabase\Model\Aurora;
 use Luma\AuroraDatabase\Utils\Collection;
 use Luma\SecurityComponent\Attributes\SecurityIdentifier;
 use Luma\SecurityComponent\Authentication\AbstractUser;
+use Luma\SecurityComponent\Entity\Role;
 
 #[Schema('Security')]
 #[Table('tblUser')]
@@ -69,19 +69,5 @@ class User extends AbstractUser
     public function getRoles(): Collection
     {
         return $this->roles;
-    }
-
-    /**
-     * Not intended for use within your application. Used for the purpose of refreshing the logged-in user on page load
-     * to avoid using stale data.
-     *
-     * @return void
-     */
-    public static function refresh(): void
-    {
-        if (isset($_SESSION['user']) && $_SESSION['user'] instanceof Aurora) {
-            $user = self::find($_SESSION['user']->getId());
-            $_SESSION['user'] = $user->with([Role::class]);
-        }
     }
 }

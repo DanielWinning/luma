@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
           'app-dark': '#151431',
+          'app-primary': '#4800ba',
           'message-info': '#4444f1',
           'message-success': '#68b468',
           'message-notice': '#808080',

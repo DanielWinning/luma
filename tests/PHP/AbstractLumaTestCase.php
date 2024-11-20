@@ -9,12 +9,10 @@ use Luma\HttpComponent\Request;
 use Luma\HttpComponent\Uri;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Runner\ErrorHandler;
-use Symfony\Component\Yaml\Yaml;
 
 abstract class AbstractLumaTestCase extends TestCase
 {
     protected Luma $app;
-    private array $testConfig = [];
 
     /**
      * @return void
@@ -30,17 +28,7 @@ abstract class AbstractLumaTestCase extends TestCase
         $dotenv = Dotenv::createImmutable($configDirectory);
         $dotenv->load();
 
-        $this->setTestConfig();
-
         $this->app = new Luma($configDirectory, $templateDirectory, $cacheDirectory);
-    }
-
-    /**
-     * @return void
-     */
-    private function setTestConfig(): void
-    {
-        $this->testConfig = Yaml::parseFile(sprintf('%s/phpunit.config.yaml', dirname(__DIR__)));
     }
 
     /**
@@ -78,9 +66,7 @@ abstract class AbstractLumaTestCase extends TestCase
      */
     protected function buildTestRequest(string $method, string $path): Request
     {
-        $scheme = array_key_exists('scheme', $this->testConfig) ? $this->testConfig['scheme'] : 'https';
-        $host = array_key_exists('host', $this->testConfig) ? $this->testConfig['host'] : '127.0.0.1';
-        $uri = new Uri($scheme, $host, $path, '');
+        $uri = new Uri('https', '127.0.0.1', $path, '');
 
         return new Request($method, $uri);
     }
